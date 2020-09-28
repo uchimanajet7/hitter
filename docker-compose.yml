@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  aws-cdk:
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    image: aws-cdk
+    container_name: aws-cdk
+    tty: true
+    command: /bin/bash
+    volumes:
+      - .:/hitter
