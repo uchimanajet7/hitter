@@ -212,13 +212,13 @@ $ git clone github.com/uchimanajet7/hitter
 
 #### 2. Building Lambda Functions
 ```	console
-cd ./hitter/hitter/lambda
-go get -v -t -d ./...
-GOOS=linux go build -o main
+$ cd ./hitter/hitter/lambda
+$ go get -v -t -d ./...
+$ GOOS=linux go build -o main
 
-cd ./hitter/hitter/lambda_api
-go get -v -t -d ./...
-GOOS=linux go build -o main
+$ cd ./hitter/hitter/lambda_api
+$ go get -v -t -d ./...
+$ GOOS=linux go build -o main
 ```
 
 #### 3. Deployment with AWS CDK
@@ -235,22 +235,22 @@ You need to install the tools and set the environment variables in advance.
 
 #### Setting Environment Variables in AWS CDK
 ```	console
-export AWS_ACCESS_KEY_ID=<YOUR ACCESS KEY>
-export AWS_SECRET_ACCESS_KEY=<YOUR SECRET KEY>
-export AWS_DEFAULT_REGION=ap-northeast-1
-export AWS_DEFAULT_OUTPUT=json
+$ export AWS_ACCESS_KEY_ID=<YOUR ACCESS KEY>
+$ export AWS_SECRET_ACCESS_KEY=<YOUR SECRET KEY>
+$ export AWS_DEFAULT_REGION=ap-northeast-1
+$ export AWS_DEFAULT_OUTPUT=json
 ```
 
 #### Setting Environment Variables in Amazon Route 53
 ```	console
-export HITTER_ZONE_NAME=example.com
-export HITTER_ZONE_ID=<YOUR ZONE ID>
+$ export HITTER_ZONE_NAME=example.com
+$ export HITTER_ZONE_ID=<YOUR ZONE ID>
 ```
 
 #### Setting Environment Variables in Slack
 ```	console
-export HITTER_SLACK_OAUTH_ACCESS_TOKEN=<YOUR SLACK OAUTH TOKEN>
-export HITTER_SLACK_VERIFICATION_TOKEN=<YOUR SLACK VERIFICATION TOKEN>
+$ export HITTER_SLACK_OAUTH_ACCESS_TOKEN=<YOUR SLACK OAUTH TOKEN>
+$ export HITTER_SLACK_VERIFICATION_TOKEN=<YOUR SLACK VERIFICATION TOKEN>
 ```
 
 If you don't have the time to set up the tools, you can use the Remote - Containers extension and Docker in Visual Studio Code to help you.
